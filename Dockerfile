@@ -1,6 +1,6 @@
 FROM python:3.7-stretch
 RUN mkdir /buildbot && \
-      apt-get update && apt-get install --no-install-recommends git dumb-init && \
+      apt-get update && apt-get install -y --no-install-recommends git dumb-init && \
       rm -rf /var/lib/apt/lists/* && \
       adduser --disabled-password --gecos "" buildbot && \
       pip install --no-cache-dir Twisted==18.9.0 && \
